@@ -128,11 +128,9 @@ const LandingPage = () => {
         </div>
       </nav>
 
-      {/* --- HERO SECTION (ECOSYSTEM WHITE THEME - REAL WIDGETS) --- */}
       {/* --- HERO SECTION (CTA ACTUALIZADO: DEMO & VIDEO) --- */}
       <header className="relative z-10 pt-40 pb-24 px-6 max-w-7xl mx-auto overflow-visible">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
           {/* --- IZQUIERDA: Texto y Nuevos CTAs --- */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -169,7 +167,7 @@ const LandingPage = () => {
                 Solicitar Demo
                 <ArrowRight className="w-4 h-4" />
               </a>
-              
+
               <button className="px-8 py-4 bg-white text-titanium border border-slate-200 rounded-xl font-bold text-sm hover:bg-slate-50 transition-all shadow-sm hover:border-titanium flex items-center justify-center gap-2">
                 Ver Video Explicativo
               </button>
@@ -187,7 +185,7 @@ const LandingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
               whileHover={{ scale: 1.04 }}
-              className="absolute right-0 top-0 z-40 bg-white/90 backdrop-blur p-4 rounded-xl shadow-glass border border-slate-200 w-60 hidden xl:block"
+              className="absolute right-0 top-16 md:top-0 z-40 bg-white/90 backdrop-blur p-4 rounded-xl shadow-glass border border-slate-200 w-60"
             >
               <div className="flex items-start gap-3">
                 <div className="mt-1 p-1.5 bg-emerald-50 rounded-lg text-emerald-600">
@@ -215,7 +213,7 @@ const LandingPage = () => {
                 y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
                 opacity: { duration: 0.5 },
               }}
-              className="absolute -left-16 top-0 z-10 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-metal border border-slate-100 w-64 scale-90 hover:scale-100 transition-all duration-300"
+              className="absolute -left-8 top-0 z-10 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-metal border border-slate-100 w-64 scale-90 hover:scale-100 transition-all hidden md:block duration-300"
             >
               <div className="flex justify-between items-center mb-3">
                 <h4 className="text-xs font-bold text-slate-700">
@@ -306,7 +304,7 @@ const LandingPage = () => {
               </div>
 
               {/* Chart Area */}
-              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-inner mb-5">
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-inner mb-5  m-auto">
                 <div className="mb-4 flex justify-between items-end">
                   <div>
                     <h4 className="text-[10px] font-bold text-slate-800">
@@ -329,7 +327,7 @@ const LandingPage = () => {
                             : "border-slate-50"
                         } w-full border-dashed`}
                       >
-                        {val === 0 ? "$0" : `${val}k`}
+                        {i % 2 === 0 ? (val === 0 ? "$0" : `${val}k`) : null}
                       </div>
                     ))}
                   </div>
@@ -397,11 +395,11 @@ const LandingPage = () => {
 
                   <div className="absolute -bottom-5 w-full flex justify-between text-[9px] text-slate-400 font-medium">
                     <span>Lun</span>
-                    <span>Mar</span>
+                    <span className="hidden md:block">Mar</span>
                     <span>Mié</span>
-                    <span>Jue</span>
+                    <span className="hidden md:block">Jue</span>
                     <span>Vie</span>
-                    <span>Sáb</span>
+                    <span className="hidden md:block">Sáb</span>
                     <span>Dom</span>
                   </div>
                 </div>
@@ -423,7 +421,7 @@ const LandingPage = () => {
               </div>
 
               {/* Bottom Row */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="hidden md:grid grid-cols-3 gap-3">
                 <div className="flex items-center gap-2 text-[10px] font-bold text-slate-600 bg-slate-50 p-2 rounded-lg border border-slate-100">
                   <Package size={12} className="text-blue-500" /> Stock
                 </div>
@@ -444,9 +442,9 @@ const LandingPage = () => {
                 y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
                 delay: 0.4,
               }}
-              className="absolute -right-16 -bottom-12 z-30 bg-white p-3 rounded-2xl shadow-2xl border border-slate-200 w-84 hover:scale-105 transition-transform origin-top-left"
+              className="absolute -right-0 lg:-right-16 -bottom-12 z-30 bg-white p-3 rounded-2xl shadow-2xl border border-slate-200 w-84 hover:scale-105 transition-transform origin-top-left hidden md:block"
             >
-              <div className="w-72 bg-slate-50 border-l border-slate-200 p-5 flex flex-col justify-between hidden md:flex rounded-r-xl">
+              <div className="w-72 bg-slate-50 border-l border-slate-200 p-5 flex flex-col justify-between rounded-r-xl">
                 <div className="flex-1 flex flex-col overflow-hidden">
                   <button className="w-full py-2.5 bg-white border border-slate-200 border-dashed rounded-lg text-slate-500 text-[10px] font-bold mb-4 hover:border-electric hover:text-electric transition-colors flex items-center justify-center gap-2">
                     <UserPlus size={16} /> Asignar Cliente
@@ -492,7 +490,7 @@ const LandingPage = () => {
                 y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
                 delay: 0.6,
               }}
-              className="absolute -left-16 -bottom-16 z-10 bg-white/90 backdrop-blur p-3 rounded-xl shadow-metal border border-slate-200 w-84 scale-90 rotate-[-5deg]"
+              className="absolute -left-0 lg:-left-16 -bottom-16 z-20 md:z-10 bg-white/90 backdrop-blur p-3 rounded-xl shadow-metal border border-slate-200 w-84 scale-90 rotate-[-5deg]"
             >
               <div className="bg-slate-50/80 backdrop-blur px-6 py-4 border-b border-slate-200 flex justify-between items-center">
                 <div className="flex gap-2 items-center">
@@ -616,51 +614,51 @@ const LandingPage = () => {
                       <th className="px-6 py-4 text-left">Concepto</th>
                       <th className="px-6 py-4 text-right">Entrada</th>
                       <th className="px-6 py-4 text-right">Salida</th>
-                      <th className="px-6 py-4 text-right">Balance</th>
+                      <th className="hidden md:block px-6 py-4 text-right">Balance</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-50">
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4">
-                        <span className="block font-bold text-slate-700">
+                      <td className="pl-6 py-4">
+                        <span className="text-[12px] block font-bold text-slate-700">
                           Saldo Inicial
                         </span>
                         <span className="text-[10px] text-slate-400">
                           Apertura de caja
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-right font-mono font-bold text-emerald-600 bg-emerald-50/10">
+                      <td className="px-6 py-4 text-right font-mono font-bold text-emerald-600 bg-emerald-50/10 text-[12px]">
                         $200.00
                       </td>
                       <td className="px-6 py-4 text-right font-mono text-slate-300 bg-red-50/10">
                         -
                       </td>
-                      <td className="px-6 py-4 text-right font-bold text-slate-700">
+                      <td className="hidden md:block px-6 py-4 text-right font-bold text-slate-700">
                         $200.00
                       </td>
                     </tr>
                     <tr className="bg-slate-50/50 hover:bg-slate-100 transition-colors">
-                      <td className="px-6 py-4">
-                        <span className="block font-bold text-slate-700">
+                      <td className="pl-6 py-4">
+                        <span className="text-[12px] block font-bold text-slate-700">
                           Venta #3402
                         </span>
                         <span className="text-[10px] text-slate-400">
                           Pago en Efectivo
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-right font-mono font-bold text-emerald-600 bg-emerald-50/10">
+                      <td className="text-[12px] px-6 py-4 text-right font-mono font-bold text-emerald-600 bg-emerald-50/10">
                         $1,349.99
                       </td>
                       <td className="px-6 py-4 text-right font-mono text-slate-300 bg-red-50/10">
                         -
                       </td>
-                      <td className="px-6 py-4 text-right font-bold text-slate-700">
+                      <td className="hidden md:block px-6 py-4 text-right font-bold text-slate-700">
                         $1,549.99
                       </td>
                     </tr>
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4">
-                        <span className="block font-bold text-slate-700">
+                      <td className="pl-6 py-4">
+                        <span className="text-[12px] block font-bold text-slate-700">
                           Pago Proveedor
                         </span>
                         <span className="text-[10px] text-slate-400">
@@ -670,10 +668,10 @@ const LandingPage = () => {
                       <td className="px-6 py-4 text-right font-mono text-slate-300 bg-emerald-50/10">
                         -
                       </td>
-                      <td className="px-6 py-4 text-right font-mono font-bold text-red-600 bg-red-50/10">
+                      <td className="text-[12px] px-6 py-4 text-right font-mono font-bold text-red-600 bg-red-50/10">
                         $149.99
                       </td>
-                      <td className="px-6 py-4 text-right font-bold text-slate-700">
+                      <td className="hidden md:block px-6 py-4 text-right font-bold text-slate-700">
                         $1,400.00
                       </td>
                     </tr>
@@ -681,6 +679,7 @@ const LandingPage = () => {
                 </table>
               </div>
             </div>
+
           </div>
         </div>
       </section>
