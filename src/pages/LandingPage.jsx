@@ -185,7 +185,7 @@ const LandingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
               whileHover={{ scale: 1.04 }}
-              className="absolute right-0 top-16 md:top-0 z-40 bg-white/90 backdrop-blur p-4 rounded-xl shadow-glass border border-slate-200 w-60"
+              className="absolute right-0 top-0 z-40 bg-white/90 backdrop-blur p-4 rounded-xl shadow-glass border border-slate-200 w-60"
             >
               <div className="flex items-start gap-3">
                 <div className="mt-1 p-1.5 bg-emerald-50 rounded-lg text-emerald-600">
@@ -490,7 +490,7 @@ const LandingPage = () => {
                 y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
                 delay: 0.6,
               }}
-              className="absolute -left-0 lg:-left-16 -bottom-16 z-20 md:z-10 bg-white/90 backdrop-blur p-3 rounded-xl shadow-metal border border-slate-200 w-84 scale-90 rotate-[-5deg]"
+              className="absolute hidden md:block -left-8 -bottom-16 z-20 md:z-10 bg-white/90 backdrop-blur p-3 rounded-xl shadow-metal border border-slate-200 w-84 scale-90 rotate-[-5deg]"
             >
               <div className="bg-slate-50/80 backdrop-blur px-6 py-4 border-b border-slate-200 flex justify-between items-center">
                 <div className="flex gap-2 items-center">
@@ -924,7 +924,7 @@ const LandingPage = () => {
                         {d.name.substring(0, 2).toUpperCase()}
                       </div>
                       <div className="flex-1">
-                        <div className="flex justify-between items-center mb-2">
+                        <div className="block md:flex justify-between items-center">
                           <div>
                             <div className="font-bold text-sm text-slate-800">
                               {d.name}
@@ -935,10 +935,10 @@ const LandingPage = () => {
                           </div>
                           <div className="text-right">
                             <div className="flex items-center gap-3">
-                              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                              <div className="hidden md:block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                                 Abonado
                               </div>
-                              <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                              <div className="w-full md:w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                                 <div
                                   className={`h-full rounded-full ${color}`}
                                   style={{ width: `${percent}%` }}
@@ -950,7 +950,7 @@ const LandingPage = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="flex justify-between items-center pt-2 border-t border-slate-50 mt-1">
+                        <div className="flex justify-between mt-2 border-t border-slate-50">
                           <div className="text-xs text-slate-500">
                             Deuda:{" "}
                             <span className="font-bold text-slate-700">
