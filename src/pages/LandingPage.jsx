@@ -614,7 +614,9 @@ const LandingPage = () => {
                       <th className="px-6 py-4 text-left">Concepto</th>
                       <th className="px-6 py-4 text-right">Entrada</th>
                       <th className="px-6 py-4 text-right">Salida</th>
-                      <th className="hidden md:block px-6 py-4 text-right">Balance</th>
+                      <th className="hidden md:block px-6 py-4 text-right">
+                        Balance
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-50">
@@ -679,7 +681,6 @@ const LandingPage = () => {
                 </table>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -977,34 +978,8 @@ const LandingPage = () => {
         className="py-24 bg-titanium/10 relative overflow-visible"
       >
         {/* Decoración de Fondo (Más viva) */}
-        <motion.div
-          animate={{
-            y: [0, Math.random() * -150 - 10, 0],
-            x: [0, Math.random() * -150 - 10, 0],
-            scale: [1, 1.2, 2],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -left-0 top-20 w-[500px] h-[500px] bg-electric rounded-full blur-[100px] -z-60"
-        ></motion.div>
-        <motion.div
-          animate={{
-            y: [0, Math.random() * 150 - 10, 0],
-            x: [0, Math.random() * 150 - 10, 0],
-            scale: [1, 1.2, 2],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -right-0 bottom-16 w-[500px] h-[600px] bg-emerald-600 blur-[150px] rounded-full -z-60"
-        ></motion.div>
+        <div className="absolute -left-0 top-20 w-[500px] h-[500px] bg-electric/40 rounded-full blur-[100px] -z-60"></div>
+        <div className="absolute -right-0 bottom-16 w-[500px] h-[600px] bg-emerald-600/40 blur-[150px] rounded-full -z-60"></div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           {/* WIDGET FLOTANTE 1: ADIÓS PAPEL (Izquierda Arriba) */}
